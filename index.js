@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 
 const cors = require('cors')
-
 app.use(cors())
 
+app.use(express.static('dist'))
 
 app.use(express.json());
 var morgan = require('morgan');
@@ -40,10 +40,11 @@ const phonebook =
 ]
 
 
-
+/*
 app.get('/', (request, response) => {
   response.send('./dist/index.html');
 })
+*/
 
 app.get('/info', (request, response) => {
   response.send(`

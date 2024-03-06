@@ -40,12 +40,6 @@ const phonebook =
 ]
 
 
-/*
-app.get('/', (request, response) => {
-  response.send('./dist/index.html');
-})
-*/
-
 app.get('/info', (request, response) => {
   response.send(`
   <p>Phonebook has data for ${phonebook.length} people</p>
